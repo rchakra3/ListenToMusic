@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:urx="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"/>
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="0.7">
+            <TextView
+                android:id="@+id/topText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.urx.widget.URXButton
+                android:id="@+id/urx_music_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topText"
+                android:text="Loading..."
+                urx:view_keywordContextId="@id/topText"
+                urx:domain="spotify.com"
+                urx:actionType="ListenAction"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
