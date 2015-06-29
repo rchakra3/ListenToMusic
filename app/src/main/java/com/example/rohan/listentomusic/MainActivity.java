@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
                 Submissions subms = new Submissions(restClient, user);
 
                 // Retrieve submissions of a submission
-                return subms.ofSubreddit("all", SubmissionSort.TOP, -1, 100, null, null, true);
+                return subms.ofSubreddit("music", SubmissionSort.TOP, -1, 100, null, null, true);
             }
         });
         List<Submission> postList=null;

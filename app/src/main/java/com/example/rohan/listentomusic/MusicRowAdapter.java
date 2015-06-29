@@ -18,7 +18,7 @@ import com.urx.core.ResponseHandler;
 import com.urx.core.search.SearchResult;
 import com.urx.core.search.SearchResults;
 import com.urx.core.search.query.Query;
-import com.urx.widget.URXButton;
+import com.urx.widget.SearchButton;
 
 import org.sonatype.guice.bean.containers.Main;
 
@@ -50,7 +50,7 @@ public class MusicRowAdapter extends ArrayAdapter<Submission> {
             rowView = inflater.inflate(R.layout.single_row, parent, false);
         }
             TextView topTextView = (TextView) rowView.findViewById(R.id.topText);
-            final URXButton button = (URXButton) rowView.findViewById(R.id.urx_music_button);
+            final SearchButton button = (SearchButton) rowView.findViewById(R.id.urx_music_button);
 
             ClientConfig config = new ClientConfig("X9eWmhr8CScV2NV009P9jjyQyjPsD2mpANR3qslSZMUMqCAZ83lvNWxoqTz5X2s=.X9eWmhr8CScV2NV009P9jjyQyjPsD2mp", context);
             final AndroidClient client = new AndroidClient(config);
@@ -68,7 +68,7 @@ public class MusicRowAdapter extends ArrayAdapter<Submission> {
                         // Handle the search results here
                         // Update our views using the first search result
                         final SearchResult firstResult = results.getResults().get(0);
-                        button.setText(firstResult.getPotentialAction().getType() + " " + firstResult.getName());
+                        //button.setText(firstResult.getPotentialAction().getType() + " " + firstResult.getName());
                         /*Picasso.with(context)
                                 .load(firstResult.getImage())
                                 .into(image, new Callback.EmptyCallback() {

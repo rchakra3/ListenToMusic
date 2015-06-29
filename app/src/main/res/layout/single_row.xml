@@ -21,13 +21,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <com.urx.widget.URXButton
+            <com.urx.widget.SearchButton
                 android:id="@+id/urx_music_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/topText"
                 android:text="Loading..."
                 urx:view_keywordContextId="@id/topText"
+                urx:initialQuery="Ellie Goulding"
                 urx:domain="spotify.com"
                 urx:actionType="ListenAction"
                 />
